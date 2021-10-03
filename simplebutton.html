@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bottom Navigation Component</title>
+</head>
+<style>
+    .bottom-nav {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 72px;
+
+        background-color: #c173ff;
+        display: flex;
+    }
+
+    .bottom-nav .nav-item {
+        flex: 1;
+        background-size: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-bottom: solid 0px #ffffff;
+
+        transition:
+            background-color 300ms,
+            border-bottom-width 300ms;
+    }
+
+    .nav-calendar {
+        background-image: url(calendar.svg)
+    }
+
+    .bottom-nav .nav-item.active{
+        background-color: #a43afa;
+        border-bottom-width: 6px;
+    }
+</style>
+<body>
+    <nav class="bottom-nav">
+        <div class="nav-item nav-microphone active"></div>
+        <div class="nav-item nav-calendar"></div>
+        <div class="nav-item nav-clock"></div>
+        <div class="nav-item nav-edit"></div>
+    </nav>
+</body>
+
+<script src='./navigationbutton.js'></script>
+</html>
